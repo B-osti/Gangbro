@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainWindow</class>
+ <widget class="CDPBaseMainWindow" name="mainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Main Window</string>
+  </property>
+  <property name="msgBoxBgSvg">
+   <string>:/themes/flat_gray_light/backgrounds/bgMsgBox.svg</string>
+  </property>
+  <property name="msgBoxBtnSvg">
+   <string>:/themes/flat_gray_light/buttons/buttonPlain.svg</string>
+  </property>
+  <property name="themeNight">
+   <string>flat_gray</string>
+  </property>
+  <property name="themeDay">
+   <string>flat_gray_light</string>
+  </property>
+  <property name="numPadName" stdset="0">
+   <string>CDPBaseNumPad</string>
+  </property>
+  <property name="keyPadName" stdset="0">
+   <string>CDPBaseKeyPad</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>60</y>
+      <width>381</width>
+      <height>391</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="CDPBaseLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>130</y>
+       <width>44</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="cdpRouting" stdset="0">
+      <string>untitled5App.ModbusMasterTCP.IO.Inputs.Input.Value</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="CDPBaseLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>180</y>
+      <width>131</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="svgFile">
+     <string>:/themes/flat_gray_light/backgrounds/bgLineEdit.svg</string>
+    </property>
+    <property name="cdpRouting" stdset="0">
+     <string>untitled5App.ModbusMasterTCP.IO.Outputs.Output.Value</string>
+    </property>
+    <property name="pushRoutables" stdset="0">
+     <stringlist>
+      <string>cdpRouting</string>
+     </stringlist>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CDPBaseLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>CDPBaseWidgets/CDPBaseLineEdit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CDPBaseLabel</class>
+   <extends>QLabel</extends>
+   <header>CDPBaseWidgets/CDPBaseLabel.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CDPBaseMainWindow</class>
+   <extends>QMainWindow</extends>
+   <header>CDPBaseWidgets/CDPBaseMainWindow.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
